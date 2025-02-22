@@ -1,0 +1,47 @@
+Section,Offense,Punishment,Case Type
+Section 43,Unauthorized access to a computer or mobile device,Compensation to the victim,Civil case
+Section 43A,Failure to protect sensitive personal data,Compensation as per damage,Civil case
+Section 44,Failure to furnish information as required by law,Penalty as per IT Act,Civil case
+Section 45,Penalty for contravention of IT Act rules,Compensation as per violation,Civil case
+Section 46,Power to adjudicate cyber offenses,Decided by adjudicating officers,Legal procedure
+Section 47,Factors considered in adjudicating penalties,Financial loss & gravity of offense,Legal procedure
+Section 48,Cyber Appellate Tribunal establishment,Tribunal handles appeals,Legal procedure
+Section 49,Composition of Cyber Appellate Tribunal,Chairperson & members,Legal procedure
+Section 50,Qualifications for Tribunal members,Legal experience required,Legal procedure
+Section 51,Term of Tribunal office,As per IT Act provisions,Legal procedure
+Section 52,Removal & resignation of Tribunal officers,Based on misconduct,Legal procedure
+Section 66,Hacking or illegal access to a computer,Up to 3 years imprisonment + ₹5 lakh fine,Criminal offense
+Section 66A,Sending offensive messages online (Repealed),Struck down by Supreme Court,Criminal offense
+Section 66B,Dishonest use of stolen computer resources,Up to 3 years imprisonment + ₹1 lakh fine,Criminal offense
+Section 66C,Identity theft using stolen credentials,Up to 3 years imprisonment + ₹1 lakh fine,Criminal offense
+Section 66D,Cheating by impersonation using a computer resource,Up to 3 years imprisonment + ₹1 lakh fine,Criminal offense
+Section 66E,Violation of privacy (capturing or transmitting private images),Up to 3 years imprisonment + ₹2 lakh fine,Criminal offense
+Section 66F,Cyber terrorism (hacking with intent to harm nation),Life imprisonment,Criminal offense
+Section 67,Publishing or transmitting obscene content online,Up to 5 years imprisonment + ₹10 lakh fine,Criminal offense
+Section 67A,Publishing sexually explicit content,Up to 7 years imprisonment + ₹10 lakh fine,Criminal offense
+Section 67B,"Child pornography (storing, distributing child abuse material)",Up to 7 years imprisonment + ₹10 lakh fine,Criminal offense
+Section 69,"Government power to monitor, intercept, and decrypt",Up to 7 years imprisonment,Government authority
+Section 69A,Blocking public access to online content,Penalty or imprisonment,Government authority
+Section 69B,Monitoring of information in the interest of security,Imprisonment or fine,Government authority
+Section 70,Protection of critical information infrastructure,Up to life imprisonment,Criminal offense
+Section 72,Breach of confidentiality and privacy,Up to 2 years imprisonment + ₹1 lakh fine,Criminal offense
+Section 72A,Disclosure of information in breach of contract,Up to 3 years imprisonment + ₹5 lakh fine,Criminal offense
+Section 74,Publishing false digital signatures,Imprisonment and fine,Criminal offense
+IPC Section 292,Sale of obscene books/material including online content,Up to 2 years imprisonment + fine,Criminal offense
+IPC Section 354A,Sexual harassment via electronic means,Up to 3 years imprisonment + fine,Criminal offense
+IPC Section 354C,Voyeurism (spying on someone electronically),Up to 7 years imprisonment + fine,Criminal offense
+IPC Section 354D,Cyberstalking or repeated electronic harassment,Up to 3 years imprisonment + fine,Criminal offense
+IPC Section 379,Theft of electronic data or identity theft,Up to 3 years imprisonment + fine,Criminal offense
+IPC Section 406,Criminal breach of trust via electronic means,Up to 3 years imprisonment + fine,Criminal offense
+IPC Section 420,Cheating and dishonestly inducing delivery of property,Up to 7 years imprisonment + fine,Criminal offense
+IPC Section 509,Insulting the modesty of a woman via electronic means,Up to 3 years imprisonment + fine,Criminal offense
+"DPDP Act, 2023",Unauthorized collection or misuse of personal data,Penalty up to ₹250 crore,Civil case
+"DPDP Act, 2023 - Section 6",Rights of data principals (users),Users have full control over data,Legal procedure
+"DPDP Act, 2023 - Section 12",Government exemptions in data processing,Certain conditions apply,Government authority
+"Aadhaar Act, 2016",Unauthorized access or misuse of Aadhaar data,Up to 3 years imprisonment + fine,Criminal offense
+Banking Regulation Act,Unauthorized online banking access,Varies based on severity,Criminal offense
+RBI Guidelines,Unauthorized online banking transactions,Reimbursement of losses,Civil case
+"Cinematograph Act, 1952",Piracy of digital content and movies,Up to 3 years imprisonment + ₹10 lakh fine,Criminal offense
+"Telegraph Act, 1885",Unauthorized interception of communication,Government authority,Government regulation
+Indecent Representation of Women Act,Posting indecent images of women online,Up to 5 years imprisonment + fine,Criminal offense
+"POSH Act, 2013",Sexual harassment in cyberspace,Strict penalties,Criminal offense

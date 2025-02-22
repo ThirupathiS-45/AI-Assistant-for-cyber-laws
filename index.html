@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Law Assistant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            margin: 50px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: left;
+            display: inline-block;
+            width: 100%;
+        }
+        ul {
+            text-align: left;
+            padding-left: 20px;
+        }
+        .auth-buttons {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Cyber Law Assistant</h2>
+
+        <div class="auth-buttons">
+            {% if current_user.is_authenticated %}
+                <p>Welcome, {{ current_user.username }}!</p>
+                <a href="{{ url_for('logout') }}"><button>Logout</button></a>
+            {% else %}
+                <a href="{{ url_for('login') }}"><button>Login</button></a>
+                <a href="{{ url_for('register') }}"><button>Register</button></a>
+            {% endif %}
+        </div>
+
+        <input type="text" id="query" placeholder="Enter your query...">
+        <button onclick="predictLaw()">Predict</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function predictLaw() {
+            let userQuery = document.getElementById("query").value;
+
+            if (!userQuery.trim()) {
+                alert("Please enter a query.");
+                return;
+            }
+
+            fetch("/predict", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ query: userQuery })
+            })
+            .then(response => {
+                if (response.status === 401) {
+                    alert("Please log in first.");
+                    window.location.href = "/login";
+                    return;
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data && data.data) {
+                    let procedureList = "<ul>";
+                    if (data.data.Procedure) {
+                        const procedures = data.data.Procedure.split(". ");
+                        procedures.forEach(procedure => {
+                            if (procedure.trim()) {
+                                procedureList += `<li>${procedure.trim()}</li>`;
+                            }
+                        });
+                    }
+                    procedureList += "</ul>";
+
+                    document.getElementById("result").innerHTML = `
+                        <b>Section:</b> ${data.data.Section} <br>
+                        <b>Offense:</b> ${data.data.Offense} <br>
+                        <b>Punishment:</b> ${data.data.Punishment} <br>
+                        <b>Case Type:</b> ${data.data["Case Type"]} <br>
+                        <b>Procedure:</b> ${procedureList} <br>
+                        <a href="${data.pdf_url}" download>Download Report</a>
+                    `;
+                } else {
+                    document.getElementById("result").innerHTML = "No data found.";
+                }
+            })
+            .catch(error => {
+                document.getElementById("result").innerHTML = "Error fetching response.";
+                console.error("Error:", error);
+            });
+        }
+    </script>
+
+</body>
+</html>
